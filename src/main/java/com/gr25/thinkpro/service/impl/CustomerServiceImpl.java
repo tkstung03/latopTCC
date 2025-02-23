@@ -48,19 +48,19 @@ public class CustomerServiceImpl {
     }
 
     public Customer getCustomerByName(String name) {
-        return this.customerRepository.findCustomerByName(name);
+        return this.customerRepository.findByName(name);
     }
 
     public Page<Customer> findCustomersByNameAndRoleId(String name, Long roleId, Pageable pageable) {
-        return this.customerRepository.findCustomersByNameAndRoleRoleId(name, roleId, pageable);
+        return this.customerRepository.findByNameAndRoleRoleId(name, roleId, pageable);
     }
 
     public Customer getCustomerById(long id) {
-        return customerRepository.findCustomerByCustomerId(id);
+        return customerRepository.findByCustomerId(id);
     }
 
     public void deleteCustomerById(long id) {
-        Customer c = customerRepository.findCustomerByCustomerId(id);
+        Customer c = customerRepository.findByCustomerId(id);
         c.setPassword("a");
         customerRepository.save(c);
         this.customerRepository.deleteCustomer(id);

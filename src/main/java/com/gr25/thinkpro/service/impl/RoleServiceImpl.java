@@ -16,14 +16,16 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public void initRoles() {
-        Role admin = new Role(1, "ROLE_ADMIN", null);
-        admin.setCreatedDate(LocalDateTime.now());
-        admin.setLastModifiedDate(LocalDateTime.now());
-        roleRepository.save(admin);
+        if (roleRepository.count() == 0) {
+            Role admin = new Role(1, "ROLE_ADMIN", null);
+            admin.setCreatedDate(LocalDateTime.now());
+            admin.setLastModifiedDate(LocalDateTime.now());
+            roleRepository.save(admin);
 
-        Role user = new Role(2, "ROLE_USER", null);
-        user.setCreatedDate(LocalDateTime.now());
-        user.setLastModifiedDate(LocalDateTime.now());
-        roleRepository.save(user);
+            Role user = new Role(2, "ROLE_USER", null);
+            user.setCreatedDate(LocalDateTime.now());
+            user.setLastModifiedDate(LocalDateTime.now());
+            roleRepository.save(user);
+        }
     }
 }
