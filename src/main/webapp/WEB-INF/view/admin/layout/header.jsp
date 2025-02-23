@@ -13,19 +13,13 @@
     <!-- Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <span style="color: white;">Welcome,
-                    <%
-                        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-                        String userName = "";
-                        if (auth != null) {
-                            // Lấy người dùng hiện tại
-                            Object principal = auth.getPrincipal();
-                            if (principal instanceof Customer) {
-                                Customer customer = (Customer) principal; // Giả định đây là đối tượng Customer
-                                userName = customer.getName(); // Đảm bảo bạn có phương thức getName() trong Customer
-                            }
-                        }
-                    %>
-
+                   <%
+                       String userName = "Guest";
+                       if (request.getUserPrincipal() != null) {
+                           userName = request.getUserPrincipal().getName();
+                       }
+                   %>
+                    <%= userName %>
                 </span>
         <!-- <div class="input-group">
 <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."

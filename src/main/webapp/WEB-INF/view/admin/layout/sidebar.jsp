@@ -50,7 +50,7 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            <%=request.getUserPrincipal().getName().toString()%>
+            <%=request.getUserPrincipal().getName()%>
         </div>
     </nav>
 </div>
