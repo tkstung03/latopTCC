@@ -11,6 +11,7 @@
     <meta name="author" content="DACN" />
     <title>ADMIN</title>
     <link href="/css/styles.css" rel="stylesheet" />
+    <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.1.0/apexcharts.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
