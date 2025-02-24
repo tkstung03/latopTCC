@@ -252,6 +252,7 @@ public class ProductPageController {
             currentProduct.setDiscount(product.getDiscount());
             currentProduct.setDescription(product.getDescription());
             currentProduct.setCategory(categoryName);
+            currentProduct.setFinalPrice((long) (product.getPrice() - product.getPrice() * product.getDiscount() / 100));
 
             boolean isDelete = false;
             for (MultipartFile file : imageFiles) {
