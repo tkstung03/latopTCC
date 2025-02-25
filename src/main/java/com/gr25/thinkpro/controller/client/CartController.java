@@ -58,7 +58,7 @@ public class CartController {
         double totalPrice = 0;
         for (CartDetail cd : cartDetails) {
             Product product = cd.getProduct();
-            totalPrice += product.getPrice() * cd.getQuantity();
+            totalPrice += product.getFinalPrice() * cd.getQuantity();
         }
 
         model.addAttribute("cartDetails", cartDetails);
