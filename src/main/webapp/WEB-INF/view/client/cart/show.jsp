@@ -294,11 +294,7 @@
                 $(totalPriceElement2[0]).text(formatCurrency((totalPrice + 30000).toFixed(2)) + " đ");
                 $(totalPriceElement[0]).attr("data-cart-total-price", totalPrice);
                 $(totalPriceElement2[0]).attr("data-cart-total-price-free", totalPrice + 30000);
-
             }
-
-            console.log(111)
-
         });
     });
 

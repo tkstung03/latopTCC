@@ -7,6 +7,7 @@ import com.gr25.thinkpro.domain.entity.Cart;
 import com.gr25.thinkpro.domain.entity.CartDetail;
 import com.gr25.thinkpro.domain.entity.Customer;
 import com.gr25.thinkpro.domain.entity.Product;
+import com.gr25.thinkpro.repository.CustomerRepository;
 import com.gr25.thinkpro.service.CartService;
 import com.gr25.thinkpro.service.CheckoutService;
 import com.gr25.thinkpro.service.impl.FeedBackServiceImpl;
@@ -27,13 +28,13 @@ public class CheckoutController {
     private final CartService cartService;
     private final CheckoutService checkoutService;
     private final FeedBackServiceImpl feedBackService;
+    private final CustomerRepository customerRepository;
 
     @GetMapping("/checkout")
     public String getCheckOutPage(Model model, HttpServletRequest request) {
-        Customer currentUser = new Customer();// null
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
-        currentUser.setCustomerId(id);
+        Customer currentUser = customerRepository.findById(id).orElse(null);
 
         Cart cart = cartService.fetchByUser(currentUser, session);
 
@@ -47,6 +48,7 @@ public class CheckoutController {
 
         model.addAttribute("cartDetails", cartDetails);
         model.addAttribute("totalPrice", totalPrice);
+        model.addAttribute("currentUser", currentUser);
 
         return "client/cart/checkout";
     }
