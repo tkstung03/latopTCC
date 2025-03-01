@@ -34,7 +34,7 @@
                             <form:form class="form p-3" action="/admin/product/create" method="post" modelAttribute="newProduct" enctype="multipart/form-data">
                                 <!-- Name input -->
                                 <div class="form-floating mb-3">
-                                    <form:input class="form-control" path="name" placeholder="Tên sản phẩm"/>
+                                    <form:input class="form-control" path="name" placeholder="Tên sản phẩm" value="${savedProduct.name != null ? savedProduct.name : ''}"/>
                                     <c:if test="${not empty errorName}">
                                         <div class="mt-1 text-danger align-content-center">
                                             <span class="">${errorName}</span>
@@ -43,7 +43,7 @@
                                     <label>Tên sản phẩm</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <form:input class="form-control" path="description" placeholder="Mô tả"/>
+                                    <form:input class="form-control" path="description" placeholder="Mô tả" value="${savedProduct.description != null ? savedProduct.description : ''}"/>
                                     <c:if test="${not empty errorDescription}">
                                         <div class="mt-1 text-danger align-content-center">
                                             <span class="">${errorDescription}</span>
@@ -52,7 +52,7 @@
                                     <label>Mô tả</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <form:input class="form-control" path="price" type="number"  placeholder="Giá"/>
+                                    <form:input class="form-control" path="price" type="number"  placeholder="Giá" value="${savedProduct.price != null ? savedProduct.price : ''}"/>
                                     <c:if test="${not empty errorPrice}">
                                         <div class="mt-1 text-danger align-content-center">
                                             <span class="">${errorPrice}</span>
@@ -61,7 +61,7 @@
                                     <label>Giá</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <form:input class="form-control" path="discount" type="number" step="0.01" placeholder="Giảm giá"/>
+                                    <form:input class="form-control" path="discount" type="number" step="0.01" placeholder="Giảm giá" value="${savedProduct.discount != null ? savedProduct.discount : ''}"/>
                                     <c:if test="${not empty errorDiscount}">
                                         <div class="mt-1 text-danger align-content-center">
                                             <span class="">${errorDiscount}</span>
@@ -70,7 +70,7 @@
                                     <label>Giảm giá</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <form:input class="form-control" path="quantity"  type="number"  placeholder="Số lượng"/>
+                                    <form:input class="form-control" path="quantity"  type="number"  placeholder="Số lượng" value="${savedProduct.quantity != null ? savedProduct.quantity : ''}"/>
                                     <c:if test="${not empty errorQuantity}">
                                         <div class="mt-1 text-danger align-content-center">
                                             <span class="">${errorQuantity}</span>

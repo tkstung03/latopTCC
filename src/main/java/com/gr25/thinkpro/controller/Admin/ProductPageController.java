@@ -91,8 +91,8 @@ public class ProductPageController {
             redirectAttributes.addFlashAttribute("errorQuantity", "Số lượng sản phẩm phải lớn hơn 0");
             hasError = true;
         }
-        if (product.getDiscount() < 0 || product.getDiscount() >= 1) {
-            redirectAttributes.addFlashAttribute("errorDiscount", "Giảm giá không hợp lệ");
+        if (product.getDiscount() < 0 || product.getDiscount() >= 100) {
+            redirectAttributes.addFlashAttribute("errorDiscount", "Giảm giá nằm trong khoảng từ 0 đến 100");
             hasError = true;
         }
 
@@ -112,6 +112,9 @@ public class ProductPageController {
                 redirectAttributes.containsAttribute("errorQuantity") ||
                 redirectAttributes.containsAttribute("errorDiscount") ||
                 redirectAttributes.containsAttribute("errorImage")) {
+
+            redirectAttributes.addFlashAttribute("savedProduct", product);
+
             return "redirect:/admin/product/create"; // Trả về lại trang tạo sản phẩm với các thông báo lỗi
         }
 
@@ -216,8 +219,8 @@ public class ProductPageController {
             }
         }
 
-        if (product.getDiscount() < 0) {
-            redirectAttributes.addFlashAttribute("errorDiscount", "Giảm giá phải lớn hơn hoặc bằng 0");
+        if (product.getDiscount() < 0 || product.getDiscount() >= 100) {
+            redirectAttributes.addFlashAttribute("errorDiscount", "Giảm giá phải lớn hơn hoặc bằng 0 và bé hơn 100");
             hasError = true;
         } else {
             try {
