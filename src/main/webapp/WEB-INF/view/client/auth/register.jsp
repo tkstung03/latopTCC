@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Register - TCC</title>
+    <title>Register - LaptopAZ</title>
     <link href="/client/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/client/css/style.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -30,7 +30,7 @@
     </style>
 </head>
 
-<body class="bg-primary">
+<body class="bg-info">
 <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
@@ -77,12 +77,12 @@
                                     </div>
                                     <!-- Submit button -->
                                     <div class="d-flex justify-content-center">
-                                        <button class="btn btn-primary btn-block mb-3">Đăng ký</button>
+                                        <button class="btn btn-danger btn-block mb-3">Đăng ký</button>
                                     </div>
                                 </form:form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="/login">Bạn đã có tài khoản! Đăng nhập</a></div>
+                                <div class="small"><a href="/login" class="text-danger">Bạn đã có tài khoản! Đăng nhập</a></div>
                             </div>
                         </div>
                     </div>

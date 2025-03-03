@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Giỏ hàng - TCC </title>
+    <title> Giỏ hàng - LaptopAZ </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -64,7 +64,7 @@
         <div class="mb-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/" class="text-info">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Chi Tiết Giỏ Hàng</li>
                 </ol>
             </nav>
@@ -101,7 +101,7 @@
                         </th>
                         <td>
                             <p class="mb-0 mt-4">
-                                <a href="/product/${cartDetail.product.productId}" target="_blank">
+                                <a href="/product/${cartDetail.product.productId}" class="text-info" target="_blank">
                                         ${cartDetail.product.name}
                                 </a>
                             </p>
@@ -218,9 +218,8 @@
                                 </c:forEach>
                             </div>
                             <button id="btn-confirm"
-                                    class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4">
-                                Xác
-                                nhận thanh toán
+                                    class="btn border-danger rounded-pill px-4 py-3 text-info text-uppercase mb-4 ms-4">
+                                Xác nhận thanh toán
                             </button>
                         </form:form>
                     </div>

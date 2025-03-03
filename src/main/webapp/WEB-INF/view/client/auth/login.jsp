@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Login - TCC</title>
+    <title>Login - LaptopAZ</title>
     <link href="/client/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/client/css/style.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
     </style>
 </head>
 
-<body class="bg-primary position-relative">
+<body class="bg-info position-relative">
     <c:if test="${not empty success}">
         <div id="PasswordAuthentication" class="position-absolute w-100">
             <main>
@@ -48,7 +48,7 @@
     <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 d-flex justify-content-center">
-                                            <a href="/forget">Quên mật khẩu?</a>
+                                            <a href="/forget" class="text-danger">Quên mật khẩu?</a>
                                         </div>
                                     </div>
                                     <div>
@@ -92,7 +92,7 @@
                                     </c:if>
                                     <div class="mt-4 mb-0">
                                         <div class="d-grid">
-                                            <button class="btn btn-primary btn-block">
+                                            <button class="btn btn-danger btn-block">
                                                 Đăng nhập
                                             </button>
                                         </div>
@@ -100,7 +100,7 @@
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="/register">Bạn chưa có tài khoản? Đăng ký!</a>
+                                <div class="small"><a href="/register" class="text-danger">Bạn chưa có tài khoản? Đăng ký!</a>
                                 </div>
                             </div>
                         </div>

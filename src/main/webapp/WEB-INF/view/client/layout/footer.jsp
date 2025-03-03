@@ -7,7 +7,7 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="https://http://localhost:8080" target="_blank">
-                                <h1 class="text-primary mb-0">TCC</h1>
+                                <h1 class="text-info mb-0">Laptop<span class="text-danger display-6">AZ</span></h1>
                                 <p class="text-secondary mb-0"></p>
                             </a>
                         </div>
@@ -36,7 +36,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Contact</h4>
-                            <p>Website: <a href="https://http://localhost:8080" target="_blank"> laptopTCC.vn</a></p>
+                            <p>Website: <a href="https://http://localhost:8080" class="text-info" target="_blank"> LaptopAZ.vn</a></p>
                         </div>
                     </div>
                 </div>
@@ -44,23 +44,3 @@
         </div>
         <!-- Footer End -->
 
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="https://http://localhost:8080" target="_blank"><i
-                                    class="fas fa-copyright text-light me-2"></i></a> All right
-                            reserved.</span>
-                    </div>
-                    <div class="col-md-6 my-auto text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed
-                        By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->

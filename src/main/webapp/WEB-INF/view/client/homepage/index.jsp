@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - TCC</title>
+    <title>Trang chủ - LaptopAZ</title>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -172,7 +172,7 @@
 
             <!-- Search Button -->
             <div class="col-md-2 col-sm-12 form-group d-flex align-items-end">
-                <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+                <button type="submit" class="btn btn-info w-100">Tìm kiếm</button>
             </div>
         </form>
 
@@ -195,7 +195,7 @@
                     </div>
                     <div class="p-4 product-details text-center">
                         <h4 style="font-size: 15px;">
-                            <a href="/product/${product.productId}">${product.name}</a>
+                            <a href="/product/${product.productId}" class="text-info">${product.name}</a>
                         </h4>
                         <div class="product-price">
                             <span class="original-price"><fmt:formatNumber type="number"
@@ -207,13 +207,13 @@
                     <div class="add-to-cart">
                         <form action="/add-product-to-cart/${product.productId}" method="post">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <button class="mx-auto btn border border-secondary rounded-pill px-3 text-primary">
-                                <i class="fa fa-shopping-bag me-2 text-primary"></i>
-                                Thêm giỏ hàng
+                            <button class="mx-auto btn border border-secondary rounded-pill px-3 text-info">
+                                <i class="fa fa-shopping-bag me-2 text-danger"></i>
+                                Thêm vào giỏ hàng
                             </button>
                             <a href="/product/${product.productId}"
-                               class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
-                                <i class="fa fa-eye me-2 text-primary"></i>
+                               class="btn border border-secondary rounded-pill px-3 text-info mt-2">
+                                <i class="fa fa-eye me-2 text-danger"></i>
                                 Chi tiết
                             </a>
                         </form>
@@ -231,7 +231,7 @@
                 </li>
                 <c:forEach var="i" begin="1" end="${totalPages}">
                     <li class="page-item ${i eq currentPage ? 'active' : ''}">
-                        <a class="page-link" href="/home?pageNum=${i}">${i}</a>
+                        <a class="bg-info page-link" href="/home?pageNum=${i}">${i}</a>
                     </li>
                 </c:forEach>
                 <li class="page-item">
@@ -253,7 +253,7 @@
 <jsp:include page="../layout/footer.jsp"/>
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+<a href="#" class="btn btn-danger py-3 fs-4 rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

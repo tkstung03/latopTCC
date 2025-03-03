@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Thanh toán - TCC</title>
+    <title> Thanh toán - LaptopAZ</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -110,7 +110,7 @@
                         </th>
                         <td>
                             <p class="mb-0 mt-4">
-                                <a href="/product/${cartDetail.product.productId}" target="_blank">
+                                <a href="/product/${cartDetail.product.productId}" class="text-info" target="_blank">
                                         ${cartDetail.product.name}
                                 </a>
                             </p>
@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="mt-4">
                                     <i class="fas fa-arrow-left"></i>
-                                    <a href="/cart">Quay lại giỏ hàng</a>
+                                    <a href="/cart" class="text-info">Quay lại giỏ hàng</a>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +231,7 @@
 
                             <div class="center-btn-container">
                                 <button id="confirmPaymentBtn" onclick=""
-                                        class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4 ">
+                                        class="btn border-danger rounded-pill px-4 py-3 text-info text-uppercase mb-4 ms-4 ">
                                     Xác nhận thanh toán
                                 </button>
                             </div>
@@ -351,7 +351,7 @@
                     const totalPrice = totalPriceElement.dataset.cartTotalPrice;
                     // console.log(totalPrice);
                     // Cập nhật các trường thông tin
-                    document.getElementById('bankId').value = "MB BANK";
+                    document.getElementById('bankId').value = "VIETCOMBANK";
                     document.getElementById('accountNo').value = data.accountNo;
                     document.getElementById('amountBank').value = new Intl.NumberFormat('vi-VN').format(totalPrice);
                     document.getElementById('descriptionBank').value = data.description;
