@@ -7,7 +7,7 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="https://http://localhost:8080" target="_blank">
-                                <h1 class="text-info mb-0">Laptop<span class="text-danger display-6">AZ</span></h1>
+                                <h1 class="text-primary mb-0">TCC</h1>
                                 <p class="text-secondary mb-0"></p>
                             </a>
                         </div>
@@ -30,13 +30,13 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">Account</h4>
-                            <a class="btn-link" href="#">My Account</a>
+                            <a class="btn-link" href="http://localhost:8080/client/user">My Account</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Contact</h4>
-                            <p>Website: <a href="https://http://localhost:8080" class="text-info" target="_blank"> LaptopAZ.vn</a></p>
+                            <p>Website: <a href="http://localhost:8080/#" class="text-primary" > LaptopTCC.vn</a></p>
                         </div>
                     </div>
                 </div>

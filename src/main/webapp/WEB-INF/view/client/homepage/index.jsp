@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - LaptopAZ</title>
+    <title>Trang chủ - TCC</title>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@
 
 <div class="container">
     <div class="row search-filter ps-5 pe-5">
-        <form id="searchFilterForm" class="row align-items-center" >
+        <form id="searchFilterForm" class="row align-items-start" >
             <div class="col-md-3 col-sm-6 form-group">
                 <label for="category" class="form-label">Danh mục</label>
                 <select class="form-select" id="category" name="category">
@@ -172,30 +172,30 @@
 
             <!-- Search Button -->
             <div class="col-md-2 col-sm-12 form-group d-flex align-items-end">
-                <button type="submit" class="btn btn-info w-100">Tìm kiếm</button>
+                <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
             </div>
         </form>
 
 
     </div>
 
-    <div class="row g-4 p-5 d-flex justify-content-around">
+    <div class="row g-4 p-5 d-flex justify-content-start">
         <c:if test="${totalPages == 0}">
             <div>Không tìm thấy sản phẩm</div>
         </c:if>
         <c:forEach var="product" items="${products}">
             <div class="col-md-12 col-lg-3">
-                <div class="rounded position-relative fruite-item border border-secondary rounded-bottom product-card">
+                <div class="rounded position-relative fruite-item border border-primary rounded-bottom product-card">
                     <div class="fruite-img">
                         <img src="/images/products/${product.images[0].url}" class="img-fluid w-100 rounded-top" alt="">
                     </div>
-                    <div class="text-white bg-secondary px-3 py-1 position-absolute"
+                    <div class="text-white bg-danger px-3 py-1 position-absolute"
                          style="top: -1px; right: -1px; border-radius: 50%;">
                         -<fmt:formatNumber type="number" value="${product.discount}"/>%
                     </div>
                     <div class="p-4 product-details text-center">
                         <h4 style="font-size: 15px;">
-                            <a href="/product/${product.productId}" class="text-info">${product.name}</a>
+                            <a href="/product/${product.productId}" class="text-primary">${product.name}</a>
                         </h4>
                         <div class="product-price">
                             <span class="original-price"><fmt:formatNumber type="number"
@@ -207,12 +207,12 @@
                     <div class="add-to-cart">
                         <form action="/add-product-to-cart/${product.productId}" method="post">
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <button class="mx-auto btn border border-secondary rounded-pill px-3 text-info">
+                            <button class="mx-auto btn border border-secondary rounded-pill px-3 text-primary">
                                 <i class="fa fa-shopping-bag me-2 text-danger"></i>
                                 Thêm vào giỏ hàng
                             </button>
                             <a href="/product/${product.productId}"
-                               class="btn border border-secondary rounded-pill px-3 text-info mt-2">
+                               class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
                                 <i class="fa fa-eye me-2 text-danger"></i>
                                 Chi tiết
                             </a>
@@ -231,7 +231,7 @@
                 </li>
                 <c:forEach var="i" begin="1" end="${totalPages}">
                     <li class="page-item ${i eq currentPage ? 'active' : ''}">
-                        <a class="bg-info page-link" href="/home?pageNum=${i}">${i}</a>
+                        <a class="page-link" href="/home?pageNum=${i}">${i}</a>
                     </li>
                 </c:forEach>
                 <li class="page-item">

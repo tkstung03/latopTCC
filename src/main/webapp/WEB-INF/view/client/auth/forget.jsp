@@ -14,6 +14,7 @@
     <link href="/client/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/client/css/style.css" rel="stylesheet">
     <link href="/client/css/forget.css" rel="stylesheet">
+    <link href="/client/css/usermanage.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <style>
@@ -31,7 +32,7 @@
     </style>
 </head>
 
-<body class="bg-primary position-relative">
+<body class="imgbanner position-relative">
 
 
 
@@ -57,12 +58,12 @@
                                             </div>
 
                                             <div class="d-flex justify-content-center">
-                                                <button class="btn btn-primary btn-block mb-3">Tiếp theo</button>
+                                                <button class="btn btn-danger btn-block mb-3">Tiếp theo</button>
                                             </div>
                                         </form:form>
                                     </div>
                                     <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="/login">Bạn đã có tài khoản! Đăng nhập</a></div>
+                                        <div class="small"><a class="text-danger" href="/login">Bạn đã có tài khoản! Đăng nhập</a></div>
                                     </div>
                                 </div>
                             </div>

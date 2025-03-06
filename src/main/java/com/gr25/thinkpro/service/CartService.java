@@ -14,4 +14,5 @@ public interface CartService {
     void handleRemoveCartDetail(long cartDetailId, HttpSession session);
 
     int getCartSum(String email, HttpSession session);
+
 }

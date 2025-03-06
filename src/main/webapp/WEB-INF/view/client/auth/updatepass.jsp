@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Change Password - LaptopAZ</title>
+    <title>Change Password - TCC</title>
     <link href="/client/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/client/css/style.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>

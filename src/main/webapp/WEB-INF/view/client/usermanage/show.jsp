@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - Laptopshop</title>
+    <title>Tài khoản - TCC</title>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,8 +67,8 @@
                     <div class="col-lg-8 text-end">
                         <ul class="nav nav-pills d-inline-flex text-center mb-5">
                             <li class="nav-item">
-                                <a class="d-flex m-2 py-2 bg-success rounded-pill active" href="/client/user/changepassword">
-                                    <span class="text-primary" style="width: 130px;">Đổi mật khẩu</span>
+                                <a class="d-flex m-2 py-2 bg-secondary rounded-pill active" href="/client/user/changepassword">
+                                    <span style="width: 130px;font-weight: bold;">Đổi mật khẩu</span>
                                 </a>
                             </li>
                         </ul>
@@ -111,7 +111,7 @@
                                         </tr>
                                         </tbody>
                                     </table>
-                                    <button class="btn btn-warning py-2 rounded-pill text-light active" type="submit">Cập nhật</button>
+                                    <button class="btn btn-secondary py-2 rounded-pill text-light active" type="submit">Cập nhật</button>
                                 </form:form>
 
                             </div>

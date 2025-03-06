@@ -5,23 +5,23 @@
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
             <a href="/" class="navbar-brand">
-                <h1 class="text-info display-6">Laptop<span class="text-danger display-6">AZ</span></h1>
+                <h2 class="text-primary display-5" style="font-family: 'Courier New', monospace;">Laptop TCC</h2>
             </a>
 
             <div class="collapse navbar-collapse bg-white justify-content-between mx-5" id="navbarCollapse">
                 <div class="mx-auto">
                     <form class="d-flex w-200" method="get" action="/home">
-                        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" name="name"
+                        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Bạn muốn tìm sản phẩm gì?" name="name"
                                aria-label="Search" value="${searchName}">
-                        <button class="btn-search btn border border-danger btn-md-square rounded-circle bg-white ms-2"
+                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white ms-2"
                                 data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                                class="fas fa-search text-info"></i>
+                                class="fas fa-search "></i>
                         </button>
                     </form>
                 </div>
                 <div class="d-flex m-3 me-0">
                     <c:if test="${not empty pageContext.request.userPrincipal}">
-                        <a href="/cart" class="position-relative me-4 my-auto text-info">
+                        <a href="/cart" class="position-relative me-4 my-auto text-primary">
                             <i class="fa fa-shopping-bag fa-2x"></i>
                             <span
                                     class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
@@ -33,7 +33,7 @@
                             <a href="#" class="dropdown" role="button" id="dropdownMenuLink"
                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="dropdown"
                                aria-expanded="false">
-                                <i class="fas fa-user fa-2x text-info"></i>
+                                <i class="fas fa-user fa-2x text-primary"></i>
                             </a>
 
                             <ul class="dropdown-menu dropdown-menu-end p-4" aria-labelledby="dropdownMenuLink">
@@ -60,7 +60,7 @@
                         </div>
                     </c:if>
                     <c:if test="${empty pageContext.request.userPrincipal}">
-                        <a href="/login" class="a-login position-relative me-4 my-auto text-info">
+                        <a href="/login" class="a-login position-relative me-4 my-auto text-primary">
                             Đăng nhập
                         </a>
                     </c:if>

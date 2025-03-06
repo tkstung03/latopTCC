@@ -77,10 +77,10 @@ public class CheckoutServiceImpl implements CheckoutService {
     @Override
     public PaymentInfo getPaymentInfo() {
         PaymentInfo paymentInfo = new PaymentInfo();
-        paymentInfo.setAccountName("NGUYEN THI QUYNH");
-        paymentInfo.setBankId("VCB");
-        paymentInfo.setAccountNo("1023095398");
-        paymentInfo.setDescription("KHACH HANG LAPTOPAZ CHUYEN KHOAN");
+        paymentInfo.setAccountName("PHAM THANH TUNG");
+        paymentInfo.setBankId("MB");
+        paymentInfo.setAccountNo("333311122003");
+        paymentInfo.setDescription("KHACH HANG TCC CHUYEN KHOAN");
         return paymentInfo;
     }
 

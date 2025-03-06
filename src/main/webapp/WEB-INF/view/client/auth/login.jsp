@@ -10,11 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>Login - LaptopAZ</title>
+    <title>Login - TCC</title>
     <link href="/client/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/client/css/style.css" rel="stylesheet">
+    <link href="/client/css/usermanage.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
     <style>
         .position-relative .eye-icon {
             position: absolute;
@@ -26,7 +28,7 @@
     </style>
 </head>
 
-<body class="bg-info position-relative">
+<body class="imgbanner position-relative">
     <c:if test="${not empty success}">
         <div id="PasswordAuthentication" class="position-absolute w-100">
             <main>

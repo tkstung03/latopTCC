@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> ${product.name} - Laptopshop</title>
+    <title> ${product.name} - TCC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -74,7 +74,7 @@
             <div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/" class="text-info">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/" class="text-primary">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Chi Tiết Sản Phẩm
                         </li>
                     </ol>
@@ -93,12 +93,12 @@
                                         </div>
                                     </c:forEach>
                                 </div>
-                                <button class="carousel-control-prev bg-info" type="button" data-bs-target="#carouselId"
+                                <button class="carousel-control-prev bg-primary" type="button" data-bs-target="#carouselId"
                                         data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next bg-info" type="button" data-bs-target="#carouselId"
+                                <button class="carousel-control-next bg-primary" type="button" data-bs-target="#carouselId"
                                         data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
@@ -157,9 +157,9 @@
                         <input class="form-control d-none" type="text" name="quantity"
                                id="cartDetails0.quantity" value="1"/>
                         <button data-product-id="${product.productId}"
-                                class="btnAddToCartDetail btn border border-secondary rounded-pill px-4 py-2 mb-4 text-info">
+                                class="btnAddToCartDetail btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
                             <i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i>
+                                    class="fa fa-shopping-bag me-2 text-danger"></i>
                             Thêm vào giỏ hàng
                         </button>
                         <!-- </form> -->
@@ -262,7 +262,7 @@
                                 <c:forEach var="category" items="${categories}">
                                     <li>
                                         <div class="d-flex justify-content-between fruite-name">
-                                            <a href="/home?category=${category.name}" class="text-info">${category.name}</a>
+                                            <a href="/home?category=${category.name}" class="text-primary">${category.name}</a>
                                             <span>(${category.products.size()})</span>
                                         </div>
                                     </li>

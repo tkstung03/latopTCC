@@ -8,8 +8,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="DACN - Dự án laptopshop" />
-    <meta name="author" content="DACN" />
+    <meta name="description" content="TTTN - LaptopTCC" />
+        <meta name="author" content="TTTN" />
     <title>ADMIN</title>
     <link href="/css/styles.css" rel="stylesheet" />
     <link href="/admin/css/show.css" rel="stylesheet"/>
@@ -23,7 +23,7 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Quản lý khách hàng</h1>
+                <h1 class="mt-4">Quản lý tài khoản</h1>
                 <div class="mt-5">
                     <div class="row">
                         <div class="col-12 mx-auto">

@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Thanh toán - LaptopAZ</title>
+    <title> Thanh toán - TCC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -110,7 +110,7 @@
                         </th>
                         <td>
                             <p class="mb-0 mt-4">
-                                <a href="/product/${cartDetail.product.productId}" class="text-info" target="_blank">
+                                <a href="/product/${cartDetail.product.productId}" class="text-primary" target="_blank">
                                         ${cartDetail.product.name}
                                 </a>
                             </p>
@@ -150,23 +150,24 @@
                             <div class="row">
                                 <div class="col-12 form-group mb-3">
                                     <label>Tên người nhận</label>
-                                    <input class="form-control" name="receiverName"
+                                    <input class="form-control mt-1" name="receiverName"
                                            value="${currentUser.name}" required/>
                                 </div>
                                 <div class="col-12 form-group mb-3">
                                     <label>Địa chỉ người nhận</label>
-                                    <input class="form-control" name="receiverAddress"
+                                    <input class="form-control mt-1" name="receiverAddress"
                                            value="${currentUser.address}" required/>
                                 </div>
                                 <div class="col-12 form-group mb-3">
                                     <label>Số điện thoại</label>
-                                    <input class="form-control" id="receiverPhone"
+                                    <input class="form-control mt-1" id="receiverPhone"
                                            name="receiverPhone" type="tel"
                                            value="${currentUser.phone}" required/>
+                                    <label id="phoneError" class="text-danger mt-1">
                                 </div>
                                 <div class="mt-4">
                                     <i class="fas fa-arrow-left"></i>
-                                    <a href="/cart" class="text-info">Quay lại giỏ hàng</a>
+                                    <a href="/cart" class="text-primary">Quay lại giỏ hàng</a>
                                 </div>
                             </div>
                         </div>
@@ -174,8 +175,7 @@
                     <div class="col-12 col-md-6">
                         <div class="bg-light rounded">
                             <div class="p-4">
-                                <h1 class="display-6 mb-4">Thông Tin <span class="fw-normal">Thanh
-                                                            Toán</span>
+                                <h1 class="display-6 mb-4 text-center">Thông Tin Thanh Toán</span>
                                 </h1>
 
                                 <div class="d-flex justify-content-between">
@@ -231,7 +231,7 @@
 
                             <div class="center-btn-container">
                                 <button id="confirmPaymentBtn" onclick=""
-                                        class="btn border-danger rounded-pill px-4 py-3 text-info text-uppercase mb-4 ms-4 ">
+                                        class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4 ">
                                     Xác nhận thanh toán
                                 </button>
                             </div>
@@ -321,10 +321,10 @@
         if (!phoneRegex.test(phoneInput.value)) {
             // Nếu số điện thoại không hợp lệ
             phoneError.style.display = "block"; // Hiển thị lỗi
-            phoneError.textContent = "Vui lòng nhập số điện thoại hợp lệ.";
+            phoneError.textContent = "Vui lòng nhập đủ số điện thoại.";
             phoneInput.focus(); // Đưa con trỏ đến ô số điện thoại
         } else {
-            phoneError.style.display = "none"; // Ẩn thông báo lỗi nếu hợp lệ
+            phoneError.style.display = "none";// Ẩn thông báo lỗi nếu hợp lệ
             event.target.submit();
         }
     });
@@ -351,7 +351,7 @@
                     const totalPrice = totalPriceElement.dataset.cartTotalPrice;
                     // console.log(totalPrice);
                     // Cập nhật các trường thông tin
-                    document.getElementById('bankId').value = "VIETCOMBANK";
+                    document.getElementById('bankId').value = "MB BANK";
                     document.getElementById('accountNo').value = data.accountNo;
                     document.getElementById('amountBank').value = new Intl.NumberFormat('vi-VN').format(totalPrice);
                     document.getElementById('descriptionBank').value = data.description;
