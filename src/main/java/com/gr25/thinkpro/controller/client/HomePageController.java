@@ -5,6 +5,7 @@ import com.gr25.thinkpro.domain.dto.request.RegisterRequestDto;
 import com.gr25.thinkpro.domain.entity.Category;
 import com.gr25.thinkpro.domain.entity.Customer;
 import com.gr25.thinkpro.domain.entity.Product;
+import com.gr25.thinkpro.repository.ProductRepository;
 import com.gr25.thinkpro.service.impl.CategoryServiceImpl;
 import com.gr25.thinkpro.service.impl.CustomerServiceImpl;
 import com.gr25.thinkpro.service.impl.ProductServiceImpl;
@@ -36,6 +37,8 @@ public class HomePageController {
     private final PasswordEncoder passwordEncoder;
 
     private final ProductServiceImpl productService;
+
+    private final ProductRepository productRepository;
 
     private final CategoryServiceImpl categoryService;
 
@@ -127,6 +130,10 @@ public class HomePageController {
                 isAsc ? Sort.by(sort).ascending() : Sort.by(sort).descending());
         Page<Product> page = productService.findProduct(productCriteriaDto, pageRequest);
         model.addAttribute("products", page.getContent());
+
+        Page<Product> products = productRepository.findTopSellingProducts(PageRequest.of(0, 4));
+        model.addAttribute("recommend_products", products.getContent());
+
         model.addAttribute("currentPage", page.getNumber() + 1);
         model.addAttribute("totalPages", page.getTotalPages());
         List<Category> categories = categoryService.findAll();

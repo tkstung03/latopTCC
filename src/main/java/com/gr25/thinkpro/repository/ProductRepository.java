@@ -1,6 +1,8 @@
 package com.gr25.thinkpro.repository;
 
 import com.gr25.thinkpro.domain.entity.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
@@ -118,4 +120,18 @@ public interface ProductRepository extends JpaRepository<Product, Long>, JpaSpec
             @Param("selectedDate") LocalDate selectedDate,
             @Param("orderBy") String orderBy
     );
+
+    @Query(value = """
+        SELECT p.* FROM products p
+        LEFT JOIN bill_detail bd ON p.product_id = bd.product_id
+        GROUP BY p.product_id
+        ORDER BY SUM(bd.quantity) DESC
+    """,
+            countQuery = """
+        SELECT COUNT(DISTINCT p.product_id) FROM products p
+        LEFT JOIN bill_detail bd ON p.product_id = bd.product_id
+    """,
+            nativeQuery = true)
+    Page<Product> findTopSellingProducts(Pageable pageable);
+
 }

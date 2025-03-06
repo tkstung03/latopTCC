@@ -86,6 +86,43 @@
             z-index: 1050; /* Ensures it appears above other elements, including "Back to Top" */
             padding: 10px; /* Adds padding inside the widget */
         }
+
+        .product-primary {
+            background-image: url('/images/z5579353903011_379d9c2c33c4d57a6462d51bd1e4af87.jpg');
+            margin: 16px 0;
+            padding: 60px 16px 24px;
+            border-radius: 15px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .group-title{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 0 0 30px;
+        }
+
+        .group-left {
+            margin: 0;
+            color: #FFF;
+            font-size: 50px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 50px;
+            text-transform: uppercase;
+            display: flex        ;
+            align-items: baseline;
+        }
+
+         .btn-view {
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +138,52 @@
 <jsp:include page="../layout/banner.jsp"/>
 
 <div class="container">
+    <div class="row product-primary mb-5">
+        <div class="group-title">
+            <p class="group-left" style="min-height: 50px">
+            </p>
+            <a href="/collection/sale-tet" class="btn-view">Xem thêm khuyến mãi +</a>
+        </div>
+        <c:forEach var="product" items="${recommend_products}">
+            <div class="col-md-12 col-lg-3">
+                <div class="rounded bg-white position-relative fruite-item border border-primary rounded-bottom product-card">
+                    <div class="fruite-img">
+                        <img src="/images/products/${product.images[0].url}" class="img-fluid w-100 rounded-top" alt="">
+                    </div>
+                    <div class="text-white bg-danger px-3 py-1 position-absolute"
+                         style="top: -1px; right: -1px; border-radius: 50%;">
+                        -<fmt:formatNumber type="number" value="${product.discount}"/>%
+                    </div>
+                    <div class="p-2 product-details text-center">
+                        <h4 style="font-size: 15px;">
+                            <a href="/product/${product.productId}" class="text-primary">${product.name}</a>
+                        </h4>
+                        <div class="product-price">
+                            <span class="original-price"><fmt:formatNumber type="number"
+                                                                           value="${product.price}"/> đ</span>
+                            <span class="discounted-price"><fmt:formatNumber type="number"
+                                                                             value="${product.price - (product.discount * product.price / 100)}"/> đ</span>
+                        </div>
+                    </div>
+                    <div class="add-to-cart pb-2">
+                        <form action="/add-product-to-cart/${product.productId}" method="post">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <button class="mx-auto btn border border-secondary rounded-pill px-3 text-primary">
+                                <i class="fa fa-shopping-bag me-2 text-danger"></i>
+                                Thêm vào giỏ hàng
+                            </button>
+                            <a href="/product/${product.productId}"
+                               class="btn border border-secondary rounded-pill px-3 text-primary mt-2">
+                                <i class="fa fa-eye me-2 text-danger"></i>
+                                Chi tiết
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
+
+    </div>
     <div class="row search-filter ps-5 pe-5">
         <form id="searchFilterForm" class="row align-items-start" >
             <div class="col-md-3 col-sm-6 form-group">
