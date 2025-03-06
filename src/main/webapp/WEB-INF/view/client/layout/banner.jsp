@@ -11,46 +11,37 @@
             <div class="col-md-12 col-lg-8">
                 <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active ">
-                            <img src="/client/img/1.jpg"
-                                 class="img-fluid  bg-secondary rounded" alt="First slide">
-
+                        <div class="carousel-item active" onclick="window.location.href='http://localhost:8080/product/14';" style="cursor: pointer;">
+                                <img src="/client/img/1.jpg" class="img-fluid bg-secondary rounded"
+                                    alt="First slide">
                         </div>
-                        <div class="carousel-item ">
-                            <img src="/client/img/2.jpg" class="img-fluid  rounded"
-                                 alt="Second slide">
 
-                        </div>
-                        <div class="carousel-item ">
+                        <div class="carousel-item " onclick="window.location.href='http://localhost:8080/product/13';" style="cursor: pointer;">
                             <img src="/client/img/3.jpg" class="img-fluid  rounded"
                                  alt="Second slide">
 
                         </div>
-                        <div class="carousel-item ">
+                        <div class="carousel-item" onclick="window.location.href='http://localhost:8080/product/8';" style="cursor: pointer;">
                             <img src="/client/img/4.jpg" class="img-fluid  rounded"
                                  alt="Second slide">
 
                         </div>
-                        <div class="carousel-item ">
+                        <div class="carousel-item " onclick="window.location.href='http://localhost:8080/product/8';" style="cursor: pointer;">
                             <img src="/client/img/5.jpg" class="img-fluid  rounded"
                                  alt="Second slide">
 
                         </div>
-                        <div class="carousel-item ">
+                        <div class="carousel-item " onclick="window.location.href='http://localhost:8080/product/16';" style="cursor: pointer;">
                              <img src="/client/img/6.jpg" class="img-fluid  rounded"
                                   alt="Second slide">
 
                         </div>
-                        <div class="carousel-item ">
+                        <div class="carousel-item " onclick="window.location.href='http://localhost:8080/product/17';" style="cursor: pointer;">
                              <img src="/client/img/7.jpg" class="img-fluid  rounded"
                                   alt="Second slide">
 
                         </div>
-                        <div class="carousel-item ">
-                             <img src="/client/img/8.jpg" class="img-fluid  rounded"
-                                  alt="Second slide">
 
-                        </div>
                     </div>
                     <button class="carousel-control-prev bg-dark" type="button" data-bs-target="#carouselId"
                             data-bs-slide="prev">

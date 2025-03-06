@@ -5,17 +5,16 @@
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
             <a href="/" class="navbar-brand">
-                <h2 class="text-primary display-5" style="font-family: 'Courier New', monospace;">Laptop TCC</h2>
+                <h2 class="text-primary display-5" style="font-family: 'Century Gothic', sans-serif;">LAPTOP TCC</h2>
             </a>
 
-            <div class="collapse navbar-collapse bg-white justify-content-between mx-5" id="navbarCollapse">
-                <div class="mx-auto">
-                    <form class="d-flex w-200" method="get" action="/home">
-                        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Bạn muốn tìm sản phẩm gì?" name="name"
+            <div class="collapse navbar-collapse bg-white justify-content-between me-4" id="navbarCollapse">
+                <div class="mx-auto mt-2">
+                    <form class="search-container" method="get" action="/home">
+                        <input class="form-control search-input border-secondary" type="search" placeholder="Bạn cần tìm gì?" name="name"
                                aria-label="Search" value="${searchName}">
-                        <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white ms-2"
-                                data-bs-toggle="modal" data-bs-target="#searchModal"><i
-                                class="fas fa-search "></i>
+                        <button class="btn-search btn border border-secondary btn-md-square bg-white">
+                            <i class="fas fa-search"></i>
                         </button>
                     </form>
                 </div>
@@ -72,9 +71,38 @@
 
 
 <style>
+    .search-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 500px; /* Điều chỉnh theo nhu cầu */
+    }
+
     .search-input {
-        width: 300px;
+        width: 350px;
         max-width: 100%;
+        height: 40px; /* Đảm bảo chiều cao đồng đều */
+        border-radius: 50px 0 0 50px;
+        border-right: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        flex: 1;
+    }
+
+    .btn-search {
+        height: 40px; /* Đặt cùng chiều cao với input */
+        width: 80px; /* Giữ kích thước phù hợp */
+        border-radius: 0 50px 50px 0;
+        border-left: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0; /* Xóa padding để tránh kích thước bị lệch */
+        font-size: 18px;
+    }
+
+    .btn-search i {
+        line-height: 1;
     }
 
     @media (max-width: 768px) {
@@ -82,6 +110,7 @@
             width: 200px;
         }
     }
+
 
     .position-relative .position-absolute {
         top: 50%;

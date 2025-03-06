@@ -142,7 +142,7 @@
         <div class="group-title">
             <p class="group-left" style="min-height: 50px">
             </p>
-            <a href="/collection/sale-tet" class="btn-view">Xem thêm khuyến mãi +</a>
+            <a href="#" class="btn-view">Xem thêm khuyến mãi +</a>
         </div>
         <c:forEach var="product" items="${recommend_products}">
             <div class="col-md-12 col-lg-3">
@@ -156,7 +156,7 @@
                     </div>
                     <div class="p-2 product-details text-center">
                         <h4 style="font-size: 15px;">
-                            <a href="/product/${product.productId}" class="text-primary">${product.name}</a>
+                            <a href="/product/${product.productId}" class="text-dark">${product.name}</a>
                         </h4>
                         <div class="product-price">
                             <span class="original-price"><fmt:formatNumber type="number"
@@ -278,7 +278,7 @@
                     </div>
                     <div class="p-4 product-details text-center">
                         <h4 style="font-size: 15px;">
-                            <a href="/product/${product.productId}" class="text-primary">${product.name}</a>
+                            <a href="/product/${product.productId}" class="text-dark">${product.name}</a>
                         </h4>
                         <div class="product-price">
                             <span class="original-price"><fmt:formatNumber type="number"
